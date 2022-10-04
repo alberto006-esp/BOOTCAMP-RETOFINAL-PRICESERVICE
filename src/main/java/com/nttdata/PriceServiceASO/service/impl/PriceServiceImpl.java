@@ -33,4 +33,15 @@ public class PriceServiceImpl implements PriceServiceI {
 		return listaPreciosBigDecimals;
 	}
 
+	@Override
+	public Price getPriceOBject(Integer id) {
+		// TODO Auto-generated method stub
+		return priceRepository.findById(id).orElseThrow();
+	}
+
+	@Override
+	public List<Price> getAllPricesObject() {
+		return priceRepository.findAll();
+	}
+
 }

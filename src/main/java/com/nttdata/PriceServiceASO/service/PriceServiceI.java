@@ -10,5 +10,9 @@ public interface PriceServiceI {
 	public BigDecimal getPrice(Integer id);
 	
 	public List<BigDecimal> getAllPrices();
+	
+	public Price getPriceOBject(Integer id);
+	
+	public List<Price> getAllPricesObject();
 
 }

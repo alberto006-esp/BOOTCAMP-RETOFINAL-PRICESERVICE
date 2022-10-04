@@ -27,6 +27,15 @@ public class PriceController {
 	@GetMapping("/get-all-prices")
 	public List<BigDecimal> getAllPrices(){
 		return priceService.getAllPrices();
-		
+	}
+	
+	@GetMapping("/get-price-object/{id}")
+	public Price getPriceObject(final @PathVariable Integer id) {
+		return priceService.getPriceOBject(id);
+	}
+	
+	@GetMapping("/get-all-prices-object")
+	public List<Price> getAllPricesObject(){
+		return priceService.getAllPricesObject();
 	}
 }
